@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram MTProto Authorization</title>
+
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  >
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      max-height: 99vh;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #212529;
+      border: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      width: 400px;           /* увеличенная ширина */
+      margin: 40px auto;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 1.5rem;      /* чуть крупнее шрифт */
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #f8f9fa;
+    }
+
+    .form-label {
+      color: #e2e3e5;
+    }
+
+    .form-control,
+    .form-select {
+      background-color: #2c2f33;
+      color: #f1f1f1;
+      border: 1px solid #444;
+    }
+    .form-control:focus,
+    .form-select:focus {
+      border-color: #66afe9;
+      box-shadow: none;
+    }
+
+    .btn-custom {
+      background-color: #198754;
+      border-color: #198754;
+      color: #fff;
+      transition: background-color 0.2s ease-in-out;
+    }
+    .btn-custom:hover {
+      background-color: #157347;
+      border-color: #146c43;
+    }
+
+    #errorBox {
+      display: none;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-body">
+      <h1 class="card-title">Telegram MTProto Authorization</h1>
+
+      <div class="mb-3">
+        <label for="authKey" class="form-label">Auth Key</label>
+        <input
+          type="text"
+          class="form-control"
+          id="authKey"
+          placeholder="Auth Key (512 symbols)"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="userId" class="form-label">User ID</label>
+        <input
+          type="text"
+          class="form-control"
+          id="userId"
+          placeholder="Enter User ID"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="dcid" class="form-label">DC ID</label>
+        <select id="dcid" class="form-select">
+          <option value="">Select DC ID</option>
+          <option value="1">DC1</option>
+          <option value="2">DC2</option>
+          <option value="3">DC3</option>
+          <option value="4">DC4</option>
+          <option value="5">DC5</option>
+        </select>
+      </div>
+
+      <div class="mb-3" id="errorBox">
+        <div class="alert alert-danger" id="errorMsg"></div>
+      </div>
+
+      <button 
+        id="loginBtn" 
+        class="btn btn-custom w-100" 
+        disabled>Next</button>
+      
+      <div align=center class="pt-3">
+        <p>
+          tg dev: <a href="https://t.me/kks0in" style="text-decoration: none; color: #198754">@kks0in</a>
+        </p>
+    </div>
+  </div>
+
+  <script src="js/popup.js"></script>
+</body>
+</html>

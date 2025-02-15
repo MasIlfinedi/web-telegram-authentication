@@ -1,0 +1,27 @@
+{
+  "name": "Telegram MTProto Authorization (TMA)",
+  "version": "1.0",
+  "manifest_version": 3,
+  "author": "kks0in",
+  "description": "Telegram Authorization via MTProto key on web.telegram.org",
+  "permissions": [
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://web.telegram.org/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
